@@ -11,6 +11,50 @@
     ],
   },
   "files": [
+    {
+      "kind": "group",
+      "path": "Features",
+      "children": [
+        {
+          "kind": "folder",
+          "path": "MoodIntensity",
+          "membership-exceptions": [
+            {
+              "target": "MoodFit Watch App",
+              "inclusions": [
+                "MoodIntensityView.swift",
+                "VerticalIntensitySlider.swift",
+              ],
+            },
+          ],
+        }, {
+          "kind": "folder",
+          "path": "MoodCheckIn",
+          "membership-exceptions": [
+            {
+              "target": "MoodFit Watch App",
+              "inclusions": [
+                "MoodCard.swift",
+                "MoodCheckInView.swift",
+              ],
+            },
+          ],
+        },
+      ],
+    }, {
+      "kind": "group",
+      "path": "Models",
+      "children": [
+        { "path": "Mood.swift", "target-membership": [ "MoodFit Watch App/compile-sources" ] },
+      ],
+    }, {
+      "kind": "group",
+      "path": "App",
+      "children": [
+        { "path": "MoodFitApp.swift", "target-membership": [ "MoodFit Watch App/compile-sources" ] },
+        { "path": "ContentView.swift", "target-membership": [ "MoodFit Watch App/compile-sources" ] },
+      ],
+    },
     { "kind": "folder", "path": "MoodFit Watch App", "target-membership": [ "MoodFit Watch App" ] },
     {
       "kind": "group",
