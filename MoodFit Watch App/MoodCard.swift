@@ -18,7 +18,7 @@ struct MoodCard: View {
                 Text(mood.title)
                     .font(.system(size: 15, weight: .heavy, design: .rounded))
                     .foregroundStyle(.white)
-                    .lineLimit(1)
+                    .lineLimit(2)
                     .minimumScaleFactor(0.7)
 
                 Spacer(minLength: 0)
