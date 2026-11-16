@@ -8,8 +8,6 @@ import SwiftUI
 import WatchKit
 
 struct MoodCheckInView: View {
-    let onSelect: (Mood) -> Void
-
     @State private var selected: Mood?
 
     var body: some View {
@@ -26,10 +24,6 @@ struct MoodCheckInView: View {
                         MoodCard(mood: mood, isSelected: selected == mood) {
                             selected = mood
                             WKInterfaceDevice.current().play(.click)
-                            // short pause so the selected outline is visible
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                                onSelect(mood)
-                            }
                         }
                     }
                 }
@@ -41,5 +35,5 @@ struct MoodCheckInView: View {
 }
 
 #Preview {
-    MoodCheckInView { _ in }
+    MoodCheckInView()
 }
